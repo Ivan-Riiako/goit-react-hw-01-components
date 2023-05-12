@@ -1,32 +1,42 @@
+import PropTypes from 'prop-types';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <div class="profile">
-      <div class="description">
+    <div className="profile">
+      <div className="description">
         <img
           src={avatar || "https://cdn-icons-png.flaticon.com/512/1077/1077012.png"}
           alt="User avatar"
-          class="avatar"
+          className="avatar"
         />
-        <p class="name">{username}</p>
-        <p class="tag">@{tag}</p>
-        <p class="location">{location}l</p>
+        <p className="name">{username}</p>
+        <p className="tag">@{tag}</p>
+        <p className="location">{location}l</p>
       </div>
 
-      <ul class="stats">
+      <ul className="stats">
         <li>
-          <span class="label">Followers</span>
-          <span class="quantity">{stats.followers}</span>
+          <span className="label">Followers</span>
+          <span className="quantity">{stats.followers}</span>
         </li>
         <li>
-          <span class="label">Views</span>
-          <span class="quantity">{stats.views}</span>
+          <span className="label">Views</span>
+          <span className="quantity">{stats.views}</span>
         </li>
         <li>
-          <span class="label">Likes</span>
-          <span class="quantity">{stats.likes}</span>
+          <span className="label">Likes</span>
+          <span className="quantity">{stats.likes}</span>
         </li>
       </ul>
     </div>
   );
+};
+
+
+Profile.propTypes = {
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string,
+  stats: PropTypes.objectOf(PropTypes.number.isRequired),
 };
