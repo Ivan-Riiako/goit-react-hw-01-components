@@ -3,8 +3,8 @@ import styles from './TransactionHistory.module.css';
 
 export const TransactionHistory = ({ items }) => {
   return (
-    <table className={styles.container}>
-      <thead>
+    <table className={styles.table}>
+      <thead className={styles.table_header}>
         <tr>
           <th>Type</th>
           <th>Amount</th>
@@ -12,9 +12,9 @@ export const TransactionHistory = ({ items }) => {
         </tr>
       </thead>
 
-      <tbody>
+      <tbody className={styles.table_body}>
         {items.map(item => (
-          <tr key={item.id}>
+          <tr key={item.id} className={styles.table_body_tr}>
             <td>{item.type}</td>
             <td>{item.amount}</td>
             <td>{item.currency}</td>
@@ -24,6 +24,7 @@ export const TransactionHistory = ({ items }) => {
     </table>
   );
 };
+// напиши стили к этой таблице, таблица на пол экрана, горизонтальные строки через одну светло серые
 
 
 TransactionHistory.propTypes = {
