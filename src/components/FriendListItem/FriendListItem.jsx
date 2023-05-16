@@ -6,6 +6,7 @@ export const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <li className={styles.container}>
       <span
+        // className={`${styles.status} ${styles[isOnline]}`}
         className={clsx(styles.status, isOnline && styles.isonline)}
       ></span>
       <img
