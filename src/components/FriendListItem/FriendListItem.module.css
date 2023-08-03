@@ -1,0 +1,37 @@
+.container{
+    margin: 10px;
+width: 15rem;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.status{
+background-color: red;
+border-radius: 50%;
+height: 1rem;
+width: 1rem;
+}
+.isonline{
+background-color: green;
+}
+.avatar{
+    width: 4rem;
+margin-left: 10px;
+}
+
+.name{
+margin-left: 5px;
+}
+
+/* .true{
+background-color: green;
+}
+.false{
+background-color: red;
+} */
